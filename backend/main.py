@@ -1,3 +1,4 @@
+import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -6,10 +7,13 @@ from collections import defaultdict
 
 app = FastAPI()
 
-# Allow frontend origin
+# Allow frontend origins — set ALLOWED_ORIGINS env var in production
+_raw = os.environ.get("ALLOWED_ORIGINS", "http://localhost:3000")
+origins = [o.strip() for o in _raw.split(",") if o.strip()]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
