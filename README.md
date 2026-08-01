@@ -10,7 +10,8 @@ A modern **visual node-based pipeline builder** built with **React**, **React Fl
 
 | Pipeline Canvas | DAG Validation |
 |----------------|----------------|
-| ![Canvas](./assets/canvas.png) | ![Validation](./assets/result.png) |
+| Deployed Link = https://pipeline-builder-puce.vercel.app/
+| Video Demo = https://drive.google.com/file/d/1YsdqfaCsB-kRyEnelSSY6fNrzLR_1aOg/view?usp=sharing
 
 ---
 
